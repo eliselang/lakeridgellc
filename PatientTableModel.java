@@ -25,7 +25,7 @@ class PatientTableModel  extends javax.swing.table.AbstractTableModel {
     private static final int HEALTH_INSURANCE_NUMBER_COL = 10;
     private static final int NOTES_COL = 11;
     
-    private String[] columnNames = {"id", "first_name", "last_name", "date_of_birth", "phone_number", "social_security_number", "address", "city", "state","health_insurance_provider", "health_insurance_number", "notes" };
+    private String[] columnNames = {"id", "first_name", "last_name", "date_of_birth", "phone_number", "social_security_number", "address", "city", "state","health_insurance_provider", "health_insurance_number" };
     
     private List<Patient> patients;
     
@@ -76,8 +76,8 @@ class PatientTableModel  extends javax.swing.table.AbstractTableModel {
                 return tempPatient.getHealthInsProv();
             case HEALTH_INSURANCE_NUMBER_COL:
                 return tempPatient.getHealthInsNum();
-            case NOTES_COL:
-                return tempPatient.getNotes();
+      //      case NOTES_COL:
+        //        return tempPatient.getNotes();
             default:
                 return tempPatient.getLastName();
         }

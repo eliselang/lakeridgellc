@@ -37,6 +37,8 @@ public class PatientListSearch extends JFrame {
     private JTable table;
     
     private Capstone capstoneDAO;
+    private JPanel panel_1;
+    private JButton btnAddPatient;
     
 /* Launch application */    
     public static void main(String[] args) {
@@ -120,6 +122,35 @@ public class PatientListSearch extends JFrame {
         table = new JTable();
         scrollPane.setViewportView(table);
         
+        panel_1 = new JPanel();
+        contentPane.add(panel_1, BorderLayout.SOUTH);
+        
+        btnAddPatient = new JButton("Add Patient");
+        btnAddPatient.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		
+        		AddPatientDialog dialog = new AddPatientDialog(PatientListSearch.this, capstoneDAO);
+        		
+        		dialog.setVisible(true);
+        	}
+        });
+        panel_1.add(btnAddPatient);
+        
     }
+
+
+	public void refreshPatientView() {
+		// TODO Auto-generated method stub
+		try {
+			List<Patient> patients = capstoneDAO.getAllPatients();
+			
+			PatientTableModel model = new PatientTableModel(patients);
+			
+			table.setModel(model);
+			
+		} catch (Exception exc) {
+			JOptionPane.showMessageDialog(this, "Error: " + exc, "Error", JOptionPane.ERROR_MESSAGE);
+		}
+	}
     
 }

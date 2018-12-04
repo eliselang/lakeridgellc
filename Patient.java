@@ -21,11 +21,11 @@ public class Patient {
     private String state;
     private String healthInsProv;
     private String healthInsNum;
-    private String notes;   
+ //   private String notes;   
     
     public Patient(int id, String firstName, String lastName, String dateOfBirth, 
             String phoneNum, String socialSec, String address, String city, String state,
-            String healthInsProv, String healthInsNum, String notes) {
+            String healthInsProv, String healthInsNum) {
         super();
         this.id = id;
         this.firstName = firstName;
@@ -38,7 +38,7 @@ public class Patient {
         this.state = state;
         this.healthInsProv = healthInsProv;
         this.healthInsNum = healthInsNum;
-        this.notes = notes;    
+   //     this.notes = notes;    
     }
     // ID getter and Setter
     public int getId() {
@@ -129,18 +129,18 @@ public class Patient {
     }
     
     //Notes getter and setter
-    public String getNotes(){
-        return notes;
-    }
-    public void setNotes(String notes) {
-        this.notes = notes;
-    }
+   // public String getNotes(){
+  //      return notes;
+ //   }
+//    public void setNotes(String notes) {
+//        this.notes = notes;
+//    }
     
     @Override
     public String toString() {
         return String
-                .format("Patient [id=%s, firstName=%s, lastName=%s, dateOfBirth=%s, phoneNum=%s, socialSec=%s, address=%s, city=%s, state=%s, healthInsProv=%s, healthInsNum=%s, notes=%s]", 
-                        id, firstName, lastName, dateOfBirth, phoneNum, socialSec, address, city, state, healthInsProv, healthInsNum, notes);
+                .format("Patient [id=%s, firstName=%s, lastName=%s, dateOfBirth=%s, phoneNum=%s, socialSec=%s, address=%s, city=%s, state=%s, healthInsProv=%s, healthInsNum=%s]", 
+                        id, firstName, lastName, dateOfBirth, phoneNum, socialSec, address, city, state, healthInsProv, healthInsNum);
     }
     
 }
