@@ -1,0 +1,110 @@
+
+<html>
+<head>
+	<title>Home</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style>
+		a {
+			color: red;
+		}
+		link a:visited {
+			color:black;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="JumboTron text-center">
+		<a href="loginIndex.html"><h1>Lake Ridge Ophthalmology</h1></a>
+	</div>
+	<nav>
+	<div class="nav">
+		<a href ="loginIndex.html">Home</a>
+		<a class="active" href="schedule.html">Schedule Appointment</a>
+		<a href ="contact.html">Contact Us</a>
+	</div>
+	<style>
+		.nav {
+			width: 100%;
+			overflow: auto;
+		}
+		.nav a {
+			color: black;
+			background-color: #D3D3D3;
+			text-align: center;
+			padding: 14px;
+			text-decoration: none;
+			font-size: 30px;
+			float: left;
+			width: 33%;
+			text-align: center;
+		}
+	</style>
+	</nav>
+	<main>
+	<div class="Container">
+		<br>
+		<br>
+		<table id="pickrow" class="pickrow" style="width:100%">
+			<thead>
+			<tr>
+				<th>Appointment ID</th>
+				<th>Date</th>
+				<th>Time</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>1234</td>
+				<td>11-13-2018</td>
+				<td>8:00</td>
+			</tr>
+			<tr>
+				<td>2345</td>
+				<td>11-14-2018</td>
+				<td>13:30</td>
+			</tr>
+			<tr>
+				<td>3456</td>
+				<td>11-14</td>
+				<td>15:00</td>
+			</tr>
+			</tbody>
+		</table>
+		<style>
+			table, th, td {
+				border: 2px solid black;
+			}
+			th, td {
+				padding: 15px;
+			}
+			th {
+				text-align: left;
+			}
+			tr:hover {
+				background-color: #EBECCD;
+			}
+			tr.selected td {
+				background-color: #EBECCD;
+			}
+		</style>
+		<br>
+		<br>
+		<button id="submit">Request Appointment</button>
+		
+		<footer>
+		<i><small>Lake Ridge Ophthalmology LLC</small></i><br>
+		<i><small>703-494-1388</small></i><br>
+		<small><a href="loginIndex.html">Back to Homepage</a></small>
+		<style>
+		footer {
+			text-align: center;
+		}
+		</style>
+	</footer>
+	</div>
+	</main>
+</body>
+
+</html>
